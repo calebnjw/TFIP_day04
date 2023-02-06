@@ -40,6 +40,7 @@ public class ClientApp {
         System.out.println("Cookie you got: " + cookie);
       }
 
+      // not sure how to keep application running to receive more commands
       is.close();
       os.close();
       sock.close();

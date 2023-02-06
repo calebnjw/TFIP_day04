@@ -51,6 +51,7 @@ public class ServerApp {
       }
 
       // release resources
+      // not sure how to keep server running to receive more commands
       is.close();
       os.close();
       sock.close();
