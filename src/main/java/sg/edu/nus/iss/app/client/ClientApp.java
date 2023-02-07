@@ -38,6 +38,8 @@ public class ClientApp {
       if (response.contains("cookie-name")) {
         String cookie = response.split(":")[1];
         System.out.println("Cookie you got: " + cookie);
+      } else {
+        System.out.println(response);
       }
 
       // not sure how to keep application running to receive more commands

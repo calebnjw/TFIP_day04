@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Cookie {
   public static String getRandomCookie(String path) {
     String randomCookie = "";
+    String output = "";
 
     // instantiate file using the fully qualified path
     File cookieFile = new File(path);
@@ -28,14 +29,18 @@ public class Cookie {
 
       // get random cookie from list using Random
       Random random = new Random();
-      randomCookie = cookies.get(random.nextInt(cookies.size()));
-      System.out.println("Cookie selected is " + randomCookie);
+      int position = random.nextInt(cookies.size());
+      randomCookie = cookies.get(position);
+      System.out.println("Cookie selected: " + randomCookie);
+      System.out.println("Random position: " + position);
+
+      output = randomCookie + ";" + position;
 
     } catch (Exception e) {
       e.printStackTrace();
     }
 
-    return randomCookie;
+    return output;
   }
 
 }
