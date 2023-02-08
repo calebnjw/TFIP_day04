@@ -69,7 +69,7 @@ public class ServerApp {
       String line;
       String[] existingResult;
       while ((line = bfr.readLine()) != null) {
-        existingResult(line);
+        // existingResult(line);
       }
       // for writing a file
       OutputStream fos = new FileOutputStream("cookie_result.txt");
