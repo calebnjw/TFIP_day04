@@ -32,7 +32,7 @@ public class ClientApp {
       String input = console.readLine("Command to send to the cookie server: ");
 
       dos.writeUTF(input); // this is where the command is sent to the server
-      dos.flush();
+      dos.flush(); // clear the output stream so it will not repeat anything
 
       String response = dis.readUTF();
       if (response.contains("cookie-name")) {
@@ -42,6 +42,7 @@ public class ClientApp {
         System.out.println(response);
       }
 
+      // this is to clear resources and close connections
       // not sure how to keep application running to receive more commands
       is.close();
       os.close();
